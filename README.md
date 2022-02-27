@@ -1,6 +1,6 @@
 [![Cypress Tests](https://github.com/NevetsKuro/Cypress-Template/actions/workflows/node.js.yml/badge.svg?branch=master)](https://github.com/NevetsKuro/Cypress-Template/actions/workflows/node.js.yml)
 
-This Projects include Github Actions + Cypress Test + Vue App 
+This Projects include Github Actions + Cypress Test + Vue App.
 It used as practice project to understand/learn/apply techniques used in the above mentioned technology. 
 
 Quickstart for Cypress:
