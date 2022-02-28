@@ -1,1 +1,1 @@
-console.log("test workflow dispatch")
+console.log("Run test on approval!")
