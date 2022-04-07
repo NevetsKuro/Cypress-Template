@@ -1,4 +1,4 @@
-name: Mini Tests
+name: Run Component tests
 on:
   issue_comment:
     types: [created]
@@ -6,7 +6,7 @@ on:
 jobs:
   mini-run:
     runs-on: ubuntu-latest
-    if: github.event.comment.body == 'Run test'
+    if: github.event.comment.body == 'Run component tests'
     steps:
       - name: Get PR SHA
         id: sha

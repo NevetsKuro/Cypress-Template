@@ -8,7 +8,7 @@ on:
 jobs:
   deploy-check:
     runs-on: ubuntu-latest
-    if: ${{ github.event.comment.body == 'Run deploy check'}}
+    if: ${{ github.event.comment.body == 'Roll Comment Dice'}}
     steps:
       - name: Pass randomly
         run: |
@@ -22,7 +22,7 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: 'Deployment succeeded! ✅',
+              body: 'Comment Created! ✅',
             });
             
       - name: Message failure
@@ -34,5 +34,5 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: 'Deployment failed! ❌',
+              body: 'Comment failed! ❌',
             });  

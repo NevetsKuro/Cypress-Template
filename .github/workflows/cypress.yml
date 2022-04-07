@@ -1,8 +1,7 @@
 name: Cypress Tests & Firebase hosting
 'on':
-  issue_comment:
-    types:
-      - created
+  pull_request:
+    types: [opened,synchronize]
 
 jobs:
   cypress-run:
