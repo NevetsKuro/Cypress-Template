@@ -1,13 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br />
-      check out <br />
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener"
-        >vue-cli documentation</a
-      >.
-    </p>
+    <Calculator />
     <h3>Developer</h3>
     <ul>
       <li>
@@ -22,12 +16,16 @@
 
 <script lang="ts">
 import Vue from 'vue';
+import Calculator from './Calculator.vue';
 
 export default Vue.extend({
   name: 'HelloWorld',
   props: {
     msg: String,
   },
+  components:{
+    Calculator,
+  }
 });
 </script>
 
