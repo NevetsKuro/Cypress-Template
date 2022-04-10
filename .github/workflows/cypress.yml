@@ -58,7 +58,16 @@ jobs:
           # pass the project ID from the secrets through environment variable
           CYPRESS_PROJECT_ID: ${{ secrets.PROJECT_ID }}
 
-      # report machine parameters
-      - run: yarn cypress info
-      - run: node -p 'os.cpus()'
+      - id: firebase_webs
+        name: Host to firebase
+        uses: FirebaseExtended/action-hosting-deploy@v0.6-alpha
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_DRIP_PROJECTS }}'
+          projectId: drip-projects
+          
+      - name: Display live URL
+        shell: bash
+        run: |
+          echo "Web: ${{steps.firebase_webs.outputs.details_url}}"
 
