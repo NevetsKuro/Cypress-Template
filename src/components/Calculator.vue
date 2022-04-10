@@ -16,7 +16,7 @@ export default {
   name: 'Calculator',
   data() {
     return {
-      number1: "10",
+      number1: "20",
       number2: "20",
     };
   },
