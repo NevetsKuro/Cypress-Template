@@ -46,9 +46,9 @@ jobs:
       - name: Firebase hosting
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          repoToken: '${{ secrets.AUTH_TOKEN }}'
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_DRIP_PROJECTS }}'
-          channelId: live
+          expires: 30d
           projectId: drip-projects
         env:
           VUE_APP_TEST: ${{ secrets.MY_ENV }}
