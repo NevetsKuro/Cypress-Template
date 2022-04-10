@@ -1,7 +1,7 @@
-// https://api.staging.dripcapital.com:8080/access/sessions
+// Create session API: https://api.staging.dripcapital.com:8080/access/sessions
 
-describe('Check pages', () => {
-  it('Login', () => {
+describe('Login thru API', () => {
+  it.skip('Login', () => {
     cy.request({
       method: 'POST',
       url: 'https://api.staging.dripcapital.com:8080/access/sessions',

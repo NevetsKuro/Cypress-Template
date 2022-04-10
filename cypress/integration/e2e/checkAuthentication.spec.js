@@ -1,5 +1,5 @@
-describe('Check Login/Logout', () => {
-  it('Login', () => {
+describe('Check Authentication', () => {
+  it('Login & logout user jatin', () => {
 
     cy.visit('https://portal.staging.dripcapital.com/')
 
@@ -16,7 +16,7 @@ describe('Check Login/Logout', () => {
       .should('include', '/')
 
     // session exist in cookie
-    cy.getCookie('accountId').should('have.property', 'value', '7131')
+    // cy.getCookie('accountId').should('have.property', 'value', '7131')
     cy.contains('Advance')
     cy.contains('Invoices')
     cy.contains('Settlement')
