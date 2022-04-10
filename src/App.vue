@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+    <img alt="Vue logo 1" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js + TypeScript + Github Actions + Firebase"/>
     <ClickToLazyLoad />
   </div>
