@@ -1,13 +1,12 @@
 name: Auto approve PR
+
 on:
-  issue_comment:
-    types:
-      - created
+  pull_request
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: github.event.comment.body == 'Approve it mr. github'
+    if: github.event.comment.body == 'Alexa, approve it!'
     steps:
     - name: Auto Approve
       # You may pin to the exact commit or the version.

@@ -6,7 +6,7 @@ name: Cypress Tests & Firebase hosting
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
-    if: ${{ github.event.comment.body == 'Run cypress check'}}
+    # if: ${{ github.event.comment.body == 'Run cypress check'}}
     steps:
       - name: Check out code 🛎
         uses: actions/checkout@v2
