@@ -1,0 +1,42 @@
+name: Approve manually
+
+on:
+  workflow_dispatch:
+    inputs: 
+      pullRequestNumber:
+        description: Pull request number to auto-approve
+        required: false
+
+jobs:
+  auto-approve:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - name: Check out code 🛎
+        uses: actions/checkout@v2
+      
+      - name: Set Node.js 14.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
+
+      - name: Build file
+        run: |
+          npm run build
+
+      - id: firebase_webs
+        uses: FirebaseExtended/action-hosting-deploy@v0.6-alpha
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_DRIP_PROJECTS }}'
+          channelId: 30d
+          projectId: drip-projects
+          expires: 4d
+        env:
+          VUE_APP_TEST: ${{ secrets.MY_ENV }}
+
+      - name: Display live URLs
+        shell: bash
+        run: |
+          echo "Web: ${{steps.firebase_webs.outputs.details_url}}"
