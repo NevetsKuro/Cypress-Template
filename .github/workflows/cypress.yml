@@ -10,23 +10,19 @@ jobs:
     steps:
       - name: Check out code 🛎
         uses: actions/checkout@v2
-      - name: Checkout Pull Request
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          PR_URL="${{ github.event.issue.pull_request.url }}"
-          PR_NUM=${PR_URL##*/}
-          echo "Checking out from PR #$PR_NUM based on URL: $PR_URL"
-          hub pr checkout $PR_NUM
       - name: Configure Git Agent
         run: |
           git config --global user.email "nevetsGhost@sample.com"
           git config --global user.name "You are being haunted!!"
           
+      - name: Set Node.js 14.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
+
       - name: Branch info
         run: |
-          echo "Branch "
-          gh pr status
+          echo "Branch ->"
           git status
       
       # Install NPM dependencies, cache them correctly
