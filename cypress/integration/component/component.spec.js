@@ -1,7 +1,7 @@
 
 describe('Create Invoice Journey', () => {
-  it('components tests', () => {
-    console.log('passed component test')
+  it('non-components tests', () => {
+    console.log('pass non-component tests')
     expect(true).to.be.true
   })
 })
