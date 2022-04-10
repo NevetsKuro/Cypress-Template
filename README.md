@@ -1,4 +1,4 @@
-[![Cypress Tests & Firebase hosting](https://github.com/NevetsKuro/Cypress-Template/actions/workflows/cypress.yml/badge.svg)](https://github.com/NevetsKuro/Cypress-Template/actions/workflows/cypress.yml)
+[![Cypress Tests & Firebase hosting](https://github.com/NevetsKuro/Cypress-Template/actions/workflows/cypress.yml/badge.svg?branch=NevetsKuro-patch-6)](https://github.com/NevetsKuro/Cypress-Template/actions/workflows/cypress.yml)
 
 This Projects include Github Actions + Cypress Test + Vue App. 
 It used as practice project to understand/learn/apply techniques used in the above mentioned technology. 
