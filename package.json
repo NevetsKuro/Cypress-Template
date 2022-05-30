@@ -10,7 +10,7 @@
     "test-runner": "./node_modules/.bin/cypress open"
   },
   "dependencies": {
-    "vue": "^2.6.11"
+    "vue": "^3.2.36"
   },
   "devDependencies": {
     "@cypress/vue": "^2.2.0",
