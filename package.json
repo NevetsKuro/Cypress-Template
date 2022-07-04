@@ -10,7 +10,7 @@
     "test-runner": "./node_modules/.bin/cypress open"
   },
   "dependencies": {
-    "vue": "^2.6.11"
+    "vue": "^2.7.0"
   },
   "devDependencies": {
     "@cypress/vue": "^2.2.0",
@@ -21,6 +21,6 @@
     "cypress-file-upload": "^5.0.8",
     "cypress-mochawesome-reporter": "^2.3.0",
     "typescript": "~4.1.5",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.7.0"
   }
 }
